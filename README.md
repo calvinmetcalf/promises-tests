@@ -40,8 +40,8 @@ your implementation in `try`/`catch` when writing the adapter.
 
 ### Examples
 
-- [Lie](http://calvinmetcalf.github.io/promises-tests/tests/lie.html)
-- [Q](http://calvinmetcalf.github.io/promises-tests/tests/q.html)
-- [RSVP](http://calvinmetcalf.github.io/promises-tests/tests/rsvp.html)
-- [When](http://calvinmetcalf.github.io/promises-tests/tests/when.html)
+- [Lie](http://calvinmetcalf.github.io/promises-tests/examples/lie.html)
+- [Q](http://calvinmetcalf.github.io/promises-tests/examples/q.html)
+- [RSVP](http://calvinmetcalf.github.io/promises-tests/examples/rsvp.html)
+- [When](http://calvinmetcalf.github.io/promises-tests/examples/when.html)
 
