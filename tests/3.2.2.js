@@ -1,16 +1,3 @@
-"use strict";
-
-var assert = require("assert");
-var testFulfilled = require("./helpers/testThreeCases").testFulfilled;
-var testRejected = require("./helpers/testThreeCases").testRejected;
-
-var adapter = global.adapter;
-var fulfilled = adapter.fulfilled;
-var pending = adapter.pending;
-
-var dummy = { dummy: "dummy" }; // we fulfill or reject with this when we don't intend to test against it
-var sentinel = { sentinel: "sentinel" }; // a sentinel fulfillment value to test for with strict equality
-
 describe("3.2.2: If `onFulfilled` is a function,", function () {
     describe("3.2.2.1: it must be called after `promise` is fulfilled, with `promise`’s fulfillment value as its " +
              "first argument.", function () {

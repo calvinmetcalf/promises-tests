@@ -1,18 +1,3 @@
-"use strict";
-
-var assert = require("assert");
-var testFulfilled = require("./helpers/testThreeCases").testFulfilled;
-var testRejected = require("./helpers/testThreeCases").testRejected;
-
-var adapter = global.adapter;
-var fulfilled = adapter.fulfilled;
-var rejected = adapter.rejected;
-var pending = adapter.pending;
-
-var dummy = { dummy: "dummy" }; // we fulfill or reject with this when we don't intend to test against it
-var sentinel = { sentinel: "sentinel" }; // a sentinel fulfillment value to test for with strict equality
-var other = { other: "other" }; // a value we don't want to be strict equal to
-
 describe("3.2.6: `then` must return a promise: `promise2 = promise1.then(onFulfilled, onRejected)`", function () {
     specify("is a promise", function () {
         var promise1 = pending().promise;

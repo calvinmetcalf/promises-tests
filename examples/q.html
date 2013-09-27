@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" href="../vender/mocha.css" />
+     <script src="../vender/mocha.js"></script>
+    <script src="../vender/chai.js"></script>
+    <script src="../vender/sinon.js"></script>
+    <script src="../vender/underscore.js"></script>
+    <script src="../vender/q.js"></script>
+    <script>
+        var adapter = {};
+        adapter.fulfilled = Q.resolve;
+        adapter.rejected = Q.reject;
+        adapter.pending = function () {
+            var deferred = Q.defer();
+            return {
+                promise: deferred.promise,
+                fulfill: deferred.resolve,
+                reject: deferred.reject
+            };
+        };
+    </script>
+    <script src="../tests/test.js"></script>
+    <script src="../tests/3.2.1.js"></script>
+    <script src="../tests/3.2.2.js"></script>
+    <script src="../tests/3.2.3.js"></script>
+    <script src="../tests/3.2.4.js"></script>
+    <script src="../tests/3.2.5.js"></script>
+    <script src="../tests/3.2.6.js"></script>
+    <script>
+      window.onload = function() {
+          if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+      else { mocha.run(); }
+      };
+    </script>
+  </head>
+  <body>
+    <div id="mocha"></div>
+  </body>
+</html>

@@ -11,12 +11,11 @@ This suite tests compliance of a promise implementation with the [Promises/A+ sp
 
 ## How To Run
 
-The tests run in a Node.js environment; make sure you have that installed.
+spin up a server, visit something in the tests directory, feel free to submit a pull with your library.
 
 ### Adapters
 
-In order to test your promise library, you must expose a very minimal adapter interface. These are written as Node.js
-modules with a few well-known exports:
+You need to have a global object called 'adapter' which the following keys:
 
 - `fulfilled(value)`: creates a promise that is already fulfilled with `value`.
 - `rejected(reason)`: creates a promise that is already rejected with `reason`.
@@ -39,54 +38,10 @@ exceptions. The tests are not structured to deal with that, and if your implemen
 exceptions—e.g., perhaps it throws when trying to resolve an already-resolved promise—you should wrap direct calls to
 your implementation in `try`/`catch` when writing the adapter.
 
-### From the CLI
+### Examples
 
-This package comes with a command-line interface that can be used either by installing it globally with
-`npm install promises-aplus-tests -g` or by including it in your `package.json`'s `devDependencies` and using npm's
-`scripts` feature. In the latter case, your setup might look something like
+- [Lie](http://calvinmetcalf.github.io/promises-tests/tests/lie.html)
+- [Q](http://calvinmetcalf.github.io/promises-tests/tests/q.html)
+- [RSVP](http://calvinmetcalf.github.io/promises-tests/tests/rsvp.html)
+- [When](http://calvinmetcalf.github.io/promises-tests/tests/when.html)
 
-```json
-{
-    "devDependencies": {
-        "promises-aplus-tests": "*"
-    },
-    "scripts": {
-        "test": "run-my-own-tests && promises-aplus-tests test/my-adapter"
-    }
-}
-```
-
-The CLI takes as its first argument the filename of your adapter file, relative to the current working directory. It
-tries to pass through any subsequent options to Mocha, so you can use e.g. `--reporter dot` or `--grep 3.2.6.4`.
-
-### Programmatically
-
-The main export of this package is a function that allows you to run the tests against an adapter:
-
-```js
-var promisesAplusTests = require("promises-aplus-tests");
-
-promisesAplusTests(adapter, function (err) {
-    // All done; output is in the console. Or check `err` for number of failures.
-});
-```
-
-You can also pass any Mocha options as the second parameter, e.g.
-
-```js
-promisesAplusTests(adapter, { reporter: "dot" }, function (err) {
-  // As before.
-});
-```
-
-### Within an Existing Mocha Test Suite
-
-If you already have a Mocha test suite and want to include these tests in it, you can do:
-
-```js
-describe("Promises/A+ Tests", function () {
-    require("promises-aplus-tests").mocha(adapter);
-});
-```
-
-This only works in Node.js, however.

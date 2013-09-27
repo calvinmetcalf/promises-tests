@@ -1,25 +1,3 @@
-"use strict";
-
-var assert = require("assert");
-var sinon = require("sinon");
-var testFulfilled = require("./helpers/testThreeCases").testFulfilled;
-var testRejected = require("./helpers/testThreeCases").testRejected;
-
-var dummy = { dummy: "dummy" }; // we fulfill or reject with this when we don't intend to test against it
-var other = { other: "other" }; // a value we don't want to be strict equal to
-var sentinel = { sentinel: "sentinel" }; // a sentinel fulfillment value to test for with strict equality
-var sentinel2 = { sentinel2: "sentinel2" };
-var sentinel3 = { sentinel3: "sentinel3" };
-
-function callbackAggregator(times, ultimateCallback) {
-    var soFar = 0;
-    return function () {
-        if (++soFar === times) {
-            ultimateCallback();
-        }
-    };
-}
-
 describe("3.2.5: `then` may be called multiple times on the same promise.", function () {
     describe("3.2.5.1: If/when `promise` is fulfilled, respective `onFulfilled` callbacks must execute in the order " +
              "of their originating calls to `then`.", function () {
