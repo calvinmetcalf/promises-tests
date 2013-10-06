@@ -25,4 +25,5 @@ Don't forget to add it to the examples below.
 - [Q](http://calvinmetcalf.github.io/promises-tests/examples/q.html)
 - [RSVP](http://calvinmetcalf.github.io/promises-tests/examples/rsvp.html)
 - [When](http://calvinmetcalf.github.io/promises-tests/examples/when.html)
+- [Bluebird](http://calvinmetcalf.github.io/promises-tests/examples/bluebird.html)
 - [jQuery (does not pass)](http://calvinmetcalf.github.io/promises-tests/examples/jquery.html)
