@@ -15,7 +15,7 @@
        adapter.pending = function () {
             var pending = {};
 
-            pending.promise = new promise(function(resolve, reject) {
+            pending.promise = new Promise(function(resolve, reject) {
                 pending.fulfill = resolve;
                 pending.reject = reject;
             });

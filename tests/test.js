@@ -1,7 +1,6 @@
 mocha.setup({
     ui: "bdd",
-    globals: ["console","__fxdriver_unwrapped"],
-    timeout: 300000
+    globals: ["console","__fxdriver_unwrapped"]
 });
 
 var assert = chai.assert;
