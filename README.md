@@ -1,3 +1,14 @@
+# promises-aplus-tests-phantom
+
+## Exactly like (promises-aplus-tests)[https://github.com/promises-aplus/promises-tests] but with a change to make it pass in phantom.js.
+
+Why not just fix the regular tests to work in phantom?
+
+[It was decided that phantom wasn't to be supported](https://github.com/promises-aplus/promises-tests/pull/67) and considering the long tail of crazy that many of the non ES5 browsers have this is not a choice that should be held against them, I'm just thankful for the tests.
+
+Corelary of that is that is that if you find any bugs in when using this with phantom CHECK IN A NON PHANTOM BROWSER WITH THE ORIGINAL TEST SUITE if the bug is still there, open it the original suite, if not open it here.  When in doubt open it here and I'll tell you if it's really a problem up stream.
+
+
 <a href="http://promises-aplus.github.com/promises-spec">
     <img src="http://promises-aplus.github.com/promises-spec/assets/logo-small.png"
          align="right" alt="Promises/A+ logo" />
