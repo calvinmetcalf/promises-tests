@@ -1,6 +1,6 @@
 # promises-aplus-tests-phantom
 
-## Exactly like (promises-aplus-tests)[https://github.com/promises-aplus/promises-tests] but with a change to make it pass in phantom.js.
+## Exactly like [promises-aplus-tests](https://github.com/promises-aplus/promises-tests)  but with a change to make it pass in phantom.js.
 
 Why not just fix the regular tests to work in phantom?
 
