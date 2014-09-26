@@ -2,7 +2,7 @@
     "name": "promises-aplus-tests-phantom",
     "description": "Compliance test suite for Promises/A+ that work in phantom-s",
     "keywords": ["promises", "promises-aplus"],
-    "version": "2.1.0-revise",
+    "version": "2.1.0+revise",
     "implements": ["Promises/A+ 1.1.0"],
     "author": "Domenic Denicola <domenic@domenicdenicola.com> (http://domenic.me)",
     "license": "WTFPL",
