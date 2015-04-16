@@ -18,7 +18,7 @@
     "scripts": {
         "lint": "jshint lib",
         "test": "mocha",
-        "prepublish": "node ./scripts/generateTestFiles.js"
+        "postinstall": "node ./scripts/generateTestFiles.js"
     },
     "dependencies": {
         "mocha": "~1.21.4",
